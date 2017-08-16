@@ -23,7 +23,7 @@ const Footer = glamorous.div({
 const loadMore = ({ helper }) =>
   helper.setQueryParameter('hitsPerPage', helper.getQueryParameter('hitsPerPage') + HITS_PER_PAGE).search()
 
-const Loader = ({ nbPages, nbHits, helper }) =>
+const Loader = ({ nbPages, helper }) =>
   nbPages > 1 &&
   <Observer onChange={() => loadMore({ helper })} render={() =>
     <Footer>
@@ -37,7 +37,6 @@ const Loader = ({ nbPages, nbHits, helper }) =>
 
 export default connect(
   ({ searchResults }) => ({
-    nbPages: (searchResults && searchResults.nbPages) || 1,
-    nbHits: (searchResults && searchResults.nbHits) || 0
+    nbPages: (searchResults && searchResults.nbPages) || 1
   })
 )(Loader)

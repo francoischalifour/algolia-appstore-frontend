@@ -9,8 +9,8 @@ const Ul = glamorous.ul({
   padding: 0
 })
 
-const CategoryFilter = ({ categories, helper }) =>
-  (helper.lastResults && helper.lastResults.nbHits === 0)
+const CategoryFilter = ({ categories, nbHits, helper }) =>
+  nbHits === 0
   ? <p>No categories matching</p>
   : categories.length > 0
     ? <Ul>
@@ -27,5 +27,6 @@ const CategoryFilter = ({ categories, helper }) =>
 export default connect(state => ({
   categories: (state.searchResults &&
     state.searchResults.getFacetValues('category', { sortBy: ['count:desc', 'name:asc'] })) ||
-    []
+    [],
+  nbHits: (state.searchResults && state.searchResults.nbHits)
 }))(CategoryFilter)

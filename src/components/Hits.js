@@ -50,7 +50,7 @@ const EmptyState = glamorous.div({
   }
 })
 
-const Hits = ({ results, state, helper }) => {
+const Hits = ({ results }) => {
   return results
     ? results.nbHits > 0
       ? <Main>
@@ -79,6 +79,5 @@ const Hits = ({ results, state, helper }) => {
 }
 
 export default connect(state => ({
-  results: state.searchResults,
-  state
+  results: state.searchResults
 }))(Hits)
