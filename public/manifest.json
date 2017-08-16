@@ -1,0 +1,15 @@
+{
+  "short_name": "AppStore",
+  "name": "Instant-search application to find apps in Algolia indices.",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#1F2532",
+  "background_color": "#F9F9FB"
+}

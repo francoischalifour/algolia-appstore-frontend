@@ -1,0 +1,45 @@
+{
+  "name": "algolia-appstore-frontend",
+  "description": "Instant-search application to find apps in Algolia indices.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": "francoischalifour/algolia-appstore-frontend",
+  "author": {
+    "name": "Francois Chalifour",
+    "email": "francois.chalifour@gmail.com",
+    "url": "https://francoischalifour.com"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "standard": {
+    "globals": [
+      "fetch",
+      "URL"
+    ]
+  },
+  "dependencies": {
+    "algoliasearch": "^3.24.3",
+    "algoliasearch-helper": "^2.21.2",
+    "dotenv": "^4.0.0",
+    "glamor": "^2.20.39",
+    "glamorous": "^4.1.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-algoliasearch-helper": "^1.2.1",
+    "react-dom": "^15.6.1",
+    "react-icons": "^2.2.5",
+    "react-intersection-observer": "^1.0.0",
+    "react-scripts": "1.0.10",
+    "react-sidebar": "^2.3.2"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3"
+  }
+}
