@@ -15,12 +15,7 @@ const Li = glamorous.li({
   boxShadow: '0 2px 4px -2px rgba(0, 0, 0, .16), 0 1px 2px #eee',
   padding: '16px',
   borderRadius: '2px',
-  lineHeight: '1.4em',
-  '& header em': {
-    fontStyle: 'inherit',
-    fontWeight: 'bold',
-    backgroundColor: '#FFEB3B'
-  }
+  lineHeight: '1.4em'
 })
 
 const Header = glamorous.header({
@@ -31,6 +26,11 @@ const Header = glamorous.header({
     textDecoration: 'none',
     color: '#263238',
     fontWeight: 'bold'
+  },
+  '& em': {
+    fontStyle: 'inherit',
+    fontWeight: 'bold',
+    backgroundColor: '#FFEB3B'
   }
 })
 

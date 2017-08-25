@@ -7,11 +7,11 @@ import MdLoop from 'react-icons/lib/md/loop'
 import { HITS_PER_PAGE } from '../config'
 
 const spinAnimation = css.keyframes({
-  '0%': { transform: `rotate(0deg)` },
-  '100%': { transform: `rotate(-360deg)` }
+  '0%': { transform: 'rotate(0deg)' },
+  '100%': { transform: 'rotate(-360deg)' }
 })
 
-const loading = css({
+const loadingClass = css({
   animation: `${spinAnimation} infinite 3s ease`
 })
 
@@ -30,7 +30,7 @@ const Loader = ({ nbPages, helper }) =>
       <MdLoop
         size={72}
         color='#CCC'
-        className={loading}
+        className={loadingClass}
       />
     </Footer>
   } />

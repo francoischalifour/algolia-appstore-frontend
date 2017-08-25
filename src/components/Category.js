@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import glamorous from 'glamorous'
 
 const Li = glamorous.li({
-  position: 'relative',
-  '& > label': {
-    display: 'block',
-    cursor: 'pointer'
-  }
+  position: 'relative'
+})
+
+const Label = glamorous.label({
+  display: 'block',
+  cursor: 'pointer'
 })
 
 const Badge = glamorous.small({
@@ -54,7 +55,7 @@ const Category = ({
   handleClick
 }) =>
   <Li>
-    <label>
+    <Label>
       <CheckBox
         type='checkbox'
         checked={isRefined}
@@ -63,7 +64,7 @@ const Category = ({
       {' '}
       {name}
       <Badge>{count}</Badge>
-    </label>
+    </Label>
   </Li>
 
 Category.propTypes = {
