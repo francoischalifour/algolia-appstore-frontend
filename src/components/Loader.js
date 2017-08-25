@@ -20,8 +20,11 @@ const Footer = glamorous.div({
   textAlign: 'center'
 })
 
-const loadMore = ({ helper }) =>
-  helper.setQueryParameter('hitsPerPage', helper.getQueryParameter('hitsPerPage') + HITS_PER_PAGE).search()
+const loadMore = ({ helper }) => {
+  helper
+    .setQueryParameter('hitsPerPage', helper.getQueryParameter('hitsPerPage') + HITS_PER_PAGE)
+    .search()
+}
 
 const Loader = ({ nbPages, helper }) =>
   nbPages > 1 &&
