@@ -83,13 +83,13 @@ const sidebarStyles = {
 const mql = window.matchMedia(`(min-width: 768px)`)
 
 const SidebarContent =
-  <aside>
+  <nav>
     <h1><MdApps /> App Store</h1>
     <h2>Categories</h2>
     <CategoryFilter />
     <h2>Rating from</h2>
     <RatingFilter />
-  </aside>
+  </nav>
 
 class App extends Component {
   constructor (props) {
