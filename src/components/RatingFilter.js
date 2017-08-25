@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-algoliasearch-helper'
 import glamorous from 'glamorous'
+import { MAX_RATING } from '../config'
 import Rating from './Rating'
 
 const Ul = glamorous.ul({
@@ -48,10 +49,10 @@ class RatingFilter extends Component {
 
     return (
       <Ul>
-        {Array.from({ length: 5 }).map((_, rating) =>
+        {Array.from({ length: MAX_RATING }).map((_, rating) =>
           <Li
             key={rating}
-            title={`${rating}/5 and up`}
+            title={`${rating}/${MAX_RATING} and up`}
             onClick={() => this.refineRating({ rating, helper })}
           >
             <Rating

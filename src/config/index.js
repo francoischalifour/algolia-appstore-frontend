@@ -4,6 +4,7 @@ module.exports = {
   APP_ID: process.env.REACT_APP_ALGOLIA_APP_ID,
   API_KEY: process.env.REACT_APP_ALGOLIA_API_KEY,
   HITS_PER_PAGE: 20,
+  MAX_RATING: 5,
   INDICES: {
     APPS_RATING_DESC: {
       name: 'apps',

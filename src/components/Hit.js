@@ -5,9 +5,8 @@ import {
   numberWithSeparator,
   formatUSD
 } from '../utils'
+import { MAX_RATING } from '../config'
 import Rating from './Rating'
-
-const MAX_RATING = 5
 
 const Li = glamorous.li({
   display: 'flex',

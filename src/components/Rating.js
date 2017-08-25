@@ -3,10 +3,11 @@ import PropTypes from 'prop-types'
 import MdStar from 'react-icons/lib/md/star'
 import MdStarHalf from 'react-icons/lib/md/star-half'
 import MdStarBorder from 'react-icons/lib/md/star-border'
+import { MAX_RATING } from '../config'
 
 const isDecimal = x => x % 1 !== 0
 
-const Rating = ({ value, color = '', max = 5 }) =>
+const Rating = ({ value, color = '', max = MAX_RATING }) =>
   <span>
     {Array.from({ length: Math.floor(value) }, (v, i) => <MdStar key={`star-${i}`} color={color} />)}
     {isDecimal(value) && <MdStarHalf key={`star-half`} color={color} />}
