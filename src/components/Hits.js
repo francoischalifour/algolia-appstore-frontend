@@ -51,15 +51,17 @@ const EmptyState = glamorous.div({
 })
 
 const Hits = ({ results }) => {
+  const { nbHits, processingTimeMS, hits } = results
+
   return results
-    ? results.nbHits > 0
+    ? nbHits > 0
       ? <Main>
         <Info>
-          <Small>{results.nbHits} results ({results.processingTimeMS} millisecond{results.processingTimeMS > 1 && 's'})</Small>
+          <Small>{nbHits} results ({processingTimeMS} millisecond{processingTimeMS > 1 && 's'})</Small>
           <Sorting />
         </Info>
         <List>
-          {results.hits.map(hit => <Hit key={hit.objectID} {...hit} />)}
+          {hits.map(hit => <Hit key={hit.objectID} {...hit} />)}
         </List>
       </Main>
     : <EmptyState>
@@ -79,5 +81,5 @@ const Hits = ({ results }) => {
 }
 
 export default connect(state => ({
-  results: state.searchResults
+  results: state.searchResults || []
 }))(Hits)
